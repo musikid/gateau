@@ -1,5 +1,5 @@
 [workspace]
-members = ["gateau", "xtask"]
+members = ["packages/gateau", "packages/cli", "xtask"]
 
 [profile.release-opt]
 inherits = "release"
@@ -10,3 +10,7 @@ panic = "abort"
 opt-level = 3
 lto = true
 codegen-units = 1
+
+[profile.release-debuginfo]
+inherits = "release"
+debug = true
